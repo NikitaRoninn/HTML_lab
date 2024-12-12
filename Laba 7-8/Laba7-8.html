@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab7-8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="lg">Тортики <span style="font-family: 'Times New Roman', serif; color: red;" >&</span> Тістечка</div>
+    </header>
+    <main>
+
+        <input type="radio" name="button" id="pie">
+        <input type="radio" name="button" id="pastry">
+        <input type="radio" name="button" id="roll">
+        <input type="radio" name="button" id="cake">
+        <input type="radio" name="button" id="cheesecake">
+        <input type="radio" name="button" id="resetfilter" checked>
+        
+        <div class="menu">
+
+            <div class="slider">
+            Калорії у порції
+            <br>
+            <input type="range" min="0" max="100" value="30" step="1">
+            <br>
+            Від * до *
+            </div>
+
+            <label for="pie" class="filter">Пиріг</label>
+            <label for="pastry" class="filter">Тістечко</label>
+            <label for="roll" class="filter">Рулет</label>
+            <label for="cake" class="filter">Торт</label>
+            <label for="cheesecake" class="filter">Сирник</label>
+            <label for="resetfilter" class="filter">Скинути фільтр</label>
+        </div>
+
+        <div class="catalogue">
+            <div class="item cheesecake">
+                <img src="images/Чизкейк Нью-Йорк.jpg" alt="cheesecake New York">
+                <span class="category">Чізкейк</span>
+                <hr class="splitter">
+                <div class="name">Чізкейк Нью-Йорк</div>
+                <div class="ccal">403</div>
+            </div>
+            <div class="item cake">
+                <img src="images/Торт прага.jpg" alt="Cake Praga">
+                <span class="category">Торт</span>
+                <hr class="splitter">
+                <div class="name">Торт прага</div>
+                <div class="ccal">468</div>
+            </div>
+            <div class="item pastry">
+                <img src="images/Тістечко Love.png" alt="Pastry Love">
+                <span class="category">Тістечко</span>
+                <hr class="splitter">
+                <div class="name">Тістечко Love</div>
+                <div class="ccal">487</div>
+            </div>
+            <div class="item roll">
+                <img src="images/Рулет з маком.jpg" alt="Poppy seed roll">
+                <span class="category">Рулет</span>
+                <hr class="splitter">
+                <div class="name">Рулет з маком</div>
+                <div class="ccal"> 320</div>
+            </div>
+            <div class="item pastry">
+                <img src="images/Тістечко Картопля.jpg" alt="poteito">
+                <span class="category">Тістечко</span>
+                <hr class="splitter">
+                <div class="name">Тістечко Картопля</div>
+                <div class="ccal">474</div>
+            </div>
+            <div class="item cheesecake">
+                <img src="images/Чизкейк веганський.jpg" alt="vegan cheesecake">
+                <span class="category">Чізкейк</span>
+                <hr class="splitter">
+                <div class="name">Чизкейк веганський</div>
+                <div class="ccal">411</div>
+            </div>
+            <div class="item cake">
+                <img src="images/Торт сердце.jpg" alt="Cake Heart">
+                <span class="category">Торт</span>
+                <hr class="splitter">
+                <div class="name">Торт сердце</div>
+                <div class="ccal">458</div>
+            </div>
+            <div class="item roll">
+                <img src="images/Рулет прага.jpg" alt="Roll Praga">
+                <span class="category">Рулет</span>
+                <hr class="splitter">
+                <div class="name">Рулет прага</div>
+                <div class="ccal">336</div>
+            </div>
+            <div class="item cheesecake">
+                <img src="images/Чизкейк з полуницею.jpg" alt="Cheesecake with strawberries">
+                <span class="category">Чізкейк</span>
+                <hr class="splitter">
+                <div class="name">Чизкейк з полуницею</div>
+                <div class="ccal">369</div>
+            </div>
+            <div class="item pie">
+                <img src="images/Періг з варенням.jpg" alt="The jam pie">
+                <span class="category">Пиріг</span>
+                <hr class="splitter">
+                <div class="name">Пиріг з варенням</div>
+                <div class="ccal">427</div>
+            </div>
+            <div class="item cake">
+                <img src="images/Франківський торт.jpg" alt="Frankivsk cake">
+                <span class="category">Торт</span>
+                <hr class="splitter">
+                <div class="name">Франківський торт</div>
+                <div class="ccal">352</div>
+            </div>
+            <div class="item pastry">
+                <img src="images/Тістечко Пиньочки.jpg" alt="Pinocchio cake">
+                <span class="category">Тістечко</span>
+                <hr class="splitter">
+                <div class="name">Тістечко Пиньочки</div>
+                <div class="ccal">428</div>
+            </div>
+            <div class="item roll">
+                <img src="images/Рулет прага.jpg" alt="Roll Praga">
+                <span class="category">Рулет</span>
+                <hr class="splitter">
+                <div class="name">Рулет прага</div>
+                <div class="ccal">341</div>
+            </div>
+            <div class="item pie">
+                <img src="images/Періг з бізе.jpg" alt="Pie bise">
+                <span class="category">Пиріг</span>
+                <hr class="splitter">
+                <div class="name">Періг з бізе</div>
+                <div class="ccal">449</div>
+            </div>
+            <div class="item pie">
+                <img src="images/Періг сирний.jpg" alt="Pie Cheese">
+                <span class="category">Пиріг</span>
+                <hr class="splitter">
+                <div class="name">Періг сирний</div>
+                <div class="ccal">426</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

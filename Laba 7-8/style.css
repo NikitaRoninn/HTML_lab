@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 730px)
+{
+    .category, .name, .ccal{
+        display: none;
+    }
+
+    .menu{
+        width: 450px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: repeat(3, auto);
+        
+    }
+
+    .slider{
+        display: none;
+    }
+
+    .item img{
+        border-radius: 15px;
+    }
+
+    .splitter{
+        display: none;
+    }
+}
+
+@media (min-width:731px) and (max-width:1200px){
+
+    .menu{
+        grid-template-columns: repeat(3, 1fr);
+        grid-row: repeat(2, auto);
+        
+    }
+
+    .slider{
+        display: none;
+    }
+
+    .catalogue{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row: auto;
+    }
+
+    .item{
+        padding: 15px;
+        border: 3px solid rgb(173, 172, 172);
+        padding-bottom: 5px;
+        background-color: lightgray;
+        transition: transform, box-shadow 0.3s;
+    }
+
+    .item:hover{
+        transition: transform 0.4s;
+        transition: box-shadow 0.13s;
+        transform: scale(1.03);
+        box-shadow:  3px 3px 5px black;
+    }
+
+    .item img{
+        object-fit: contain;
+        max-height: 70%;
+    }
+
+    .name{
+        display: inline-block;
+    }
+
+    .splitter{
+        display: none;
+    }
+}
+
+@media (min-width: 1201px)
+{
+
+    main{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .catalogue{
+        flex: 0 0 73%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row: auto;
+    }
+
+
+    .menu{
+        flex: 0 0 280px;
+        order: 2;
+        background-color: rgb(215, 220, 220);
+        border: 2px solid rgb(189, 189, 189);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        height: 550px;
+        position: sticky;
+        top: 80px
+    }
+
+    .item{
+        padding: 15px;
+        border: 2px solid rgb(162, 162, 162);
+        padding-bottom: 5px;
+        background-color: rgb(200, 196, 196);
+        transition: transform, box-shadow 0.3s;
+    }
+
+    .item:hover{
+        transition: transform 0.4s;
+        transition: box-shadow 0.13s;
+        transform: scale(1.03);
+        box-shadow:  3px 3px 5px black;
+    }
+
+    .item img{
+        object-fit: contain;
+        max-height: 70%;
+    }
+
+    .splitter{
+        display: block;
+    }
+}
+
+
+
+.lg{
+    display: inline-block;
+    font-size: 48px;
+    background: linear-gradient;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.menu{
+    justify-self: center;
+    padding: 8px;
+    display: grid;
+    
+}
+
+.filter{
+    cursor: pointer;
+    margin: 5px;
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    background-color: lightgray;
+    border: 3px solid rgb(138, 138, 138);
+    border-radius: 15px;
+    padding-top: 18px;
+    text-align: center;
+    font-size: 24px;
+    font-family:'Times New Roman', Times, serif;
+
+    transition: transform 0.3s;
+}
+
+.filter:hover{
+    transition: transform 0.4s;
+    transform: scale(1.08);
+}
+
+#pie:checked ~ .menu>label[for="pie"],
+#pastry:checked ~ .menu>label[for="pastry"],
+#roll:checked ~ .menu>label[for="roll"],
+#cake:checked ~ .menu>label[for="cake"],
+#cheesecake:checked ~ .menu>label[for="cheesecake"]{
+    background-color: rgb(6, 170, 225);
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.item{
+    display: none;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+#resetfilter:checked~.catalogue>.item,
+#pie:checked~.catalogue>.pie,
+#pastry:checked~.catalogue>.pastry,
+#roll:checked~.catalogue>.roll,
+#cake:checked~.catalogue>.cake,
+#cheesecake:checked~.catalogue>.cheesecake{
+    display: block;
+}
+
+.item img{
+    width: 100%;
+    height: auto;
+}
+
+.category::after{
+    content: ':';
+}
+
+.name{
+    font-weight: bold;
+}
+
+.ccal::before{
+    content: 'Калорій у проції: ';
+    font-weight:normal;
+}
+
+.ccal{
+    font-weight: bold;;
+}
+
+.ccal::after{
+    content: ' кКал';
+    font-weight:normal;
+}
